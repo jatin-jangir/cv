@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jatin Jangir Portfolio</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+        }
+        .icon-links a {
+            margin-right: 10px;
+            color: #444;
+            text-decoration: none;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills-list span {
+            background: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .projects-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .sketches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card, .sketch-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3, .sketch-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            margin: 0 0 15px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .project-link svg {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+            fill: #0366d6;
+        }
+
+        .project-skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .project-skills-list span {
+            background: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+        }
+        .download-resume {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .download-resume a {
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .download-resume a:hover {
+            background: #0056b3;
+        }
+        .sketch-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/rmbg-plane.png" alt="Profile Photo">
+        <h1>Jatin Jangir</h1>
+        <p>Software Developer and DevOps Engineer</p>
+        <div class="icon-links">
+          <a href="mailto:jatinjangir0220@gmail.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm16 2H4v.01l8 4.99 8-4.99V6zm0 2.76l-8 4.99-8-4.99V18h16V8.76z" />
+              </svg>
+          </a>
+          <a href="tel:+918094234071" aria-label="Phone">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 01.91-.27 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.25a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.27.91z" />
+              </svg>
+          </a>
+          <a href="https://github.com/jatin-jangir" target="_blank" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1 .07 1.54 1 1.54 1 .89 1.52 2.34 1.08 2.91.83a2.07 2.07 0 01.62-1.31c-2.22-.25-4.56-1.11-4.56-4.94a3.87 3.87 0 011-2.68 3.59 3.59 0 01.1-2.64s.84-.27 2.75 1a9.52 9.52 0 015 0c1.91-1.28 2.75-1 2.75-1a3.59 3.59 0 01.1 2.64 3.87 3.87 0 011 2.68c0 3.83-2.34 4.69-4.57 4.94a2.33 2.33 0 01.67 1.8v2.67c0 .26.18.57.69.48A10 10 0 0012 2z" />
+              </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jatin-jangir-1973631b5/" target="_blank" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8.09 19H5.27V8.64h2.82zm-1.41-11.1a1.63 1.63 0 111.63-1.63 1.63 1.63 0 01-1.63 1.63zM19 19h-2.82v-5.17a1.4 1.4 0 00-2.8 0V19H10.6V8.64h2.76v1.44a3.22 3.22 0 012.91-1.44c3.12 0 3.7 2.05 3.7 4.72z" />
+              </svg>
+          </a>
+      </div>
+
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Software Developer and DevOps Engineer with a strong foundation in computer science and a knack for optimizing and automating processes. My expertise spans across Kubernetes, CI/CD pipelines, and cloud platforms.</p>
+        <div class="download-resume">
+            <a href="jatin_resume.pdf" download>Download My Resume</a>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>M.Tech. (CSE)</strong> - Indian Institute of Technology, Kanpur (CGPA: 9) <br> <span>2024-Present</span></li>
+            <li><strong>B.Tech. (CSE)</strong> - RCOEM, Nagpur (CGPA: 9) <br> <span>2019-2023</span></li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <strong>DevOps Engineer</strong> at <strong>Devtron</strong> (Jan 2023 - July 2024)<br>
+                <ul>
+                    <li><strong>Removed</strong> the dependencies on namespaces in installation</li>
+                    <li><strong>Improved</strong> the <strong>CI/CD</strong> flow with help from <strong>Github Actions</strong></li>
+                    <li>Worked directly with clients to <strong>resolve issues</strong> in <strong>Kubernetes</strong></li>
+                    <li><strong>Consulted</strong> clients for implementing and upgrading their <strong>Kubernetes clusters</strong> on <strong>EKS</strong>, <strong>AKS</strong></li>
+                    <li><strong>Reduced</strong> the size of Docker images by <strong>25%</strong> (approx) for various <strong>microservices</strong></li>
+                    <li><strong>Upgraded</strong> <strong>AKS</strong> and <strong>EKS</strong> clusters to newer <strong>Kubernetes versions</strong></li>
+                    <li>Set up <strong>Log-Monitoring</strong> system to reduce <strong>4xx</strong> and <strong>5xx</strong> errors</li>
+                    <li><strong>Improved</strong> the migration process of <strong>SQL files</strong> in the database</li>
+                    <li>Created <strong>Kubernetes clusters</strong> on <strong>Raspberry Pi</strong></li>
+                    <li><strong>Improved</strong> <strong>Helm charts</strong> for integrating different tools and <strong>Kubernetes resources</strong></li>
+                    <li>Added <strong>Open-source contributions</strong> in <strong>MicroK8s</strong> for integration with <strong>Devtron</strong></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Web Developer Intern</strong> at <strong>PrimaThink Technologies Pvt. Ltd</strong> (Sept 2021 - Nov 2021)<br>
+                <ul>
+                    <li>Contributed to <strong>web development projects</strong> remotely</li>
+                </ul>
+            </li>
+        </ul>
+    </section>    
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>Python</span><span>C/C++</span><span>Bash</span><span>Go</span><span>Docker</span>
+            <span>Kubernetes</span><span>AWS</span><span>Postgres</span><span>Git</span><span>Helm</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Logminder</h3>
+                <p>Monitors Kubernetes logs for errors and provides insights.</p>
+                <a class="project-link" href="https://github.com/jatin-jangir/logminder" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1 .07 1.54 1 1.54 1 .89 1.52 2.34 1.08 2.91.83a2.07 2.07 0 01.62-1.31c-2.22-.25-4.56-1.11-4.56-4.94a3.87 3.87 0 011-2.68 3.59 3.59 0 01.1-2.64s.84-.27 2.75 1a9.52 9.52 0 015 0c1.91-1.28 2.75-1 2.75-1a3.59 3.59 0 01.1 2.64 3.87 3.87 0 011 2.68c0 3.83-2.34 4.69-4.57 4.94a2.33 2.33 0 01.67 1.8v2.67c0 .26.18.57.69.48A10 10 0 0012 2z" />
+                    </svg>
+                </a>
+                <div class="project-skills-list">
+                    <span>Python</span>
+                    <span>Kubernetes</span>
+                    <span>Postgres</span>
+                    <span>Docker</span>
+                    <span>MiniO</span>
+                    <span>ML/AI</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Namespace-crawler</h3>
+                <p>Replicates Kubernetes objects across namespaces efficiently.</p>
+                <a class="project-link" href="https://github.com/jatin-jangir/namespace-crawler" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1 .07 1.54 1 1.54 1 .89 1.52 2.34 1.08 2.91.83a2.07 2.07 0 01.62-1.31c-2.22-.25-4.56-1.11-4.56-4.94a3.87 3.87 0 011-2.68 3.59 3.59 0 01.1-2.64s.84-.27 2.75 1a9.52 9.52 0 015 0c1.91-1.28 2.75-1 2.75-1a3.59 3.59 0 01.1 2.64 3.87 3.87 0 011 2.68c0 3.83-2.34 4.69-4.57 4.94a2.33 2.33 0 01.67 1.8v2.67c0 .26.18.57.69.48A10 10 0 0012 2z" />
+                    </svg>
+                </a>
+                <div class="project-skills-list">
+                    <span>Kubernetes</span>
+                    <span>Go-Lang</span>
+                    <span>Docker</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Dynamic Audience Reaction Prediction Application (DARPAN)</h3>
+                <p>Predicts audience reactions on YouTube videos based on topics and improves algorithm for better search results.</p>
+                <a class="project-link" href="https://github.com/jatin-jangir/DARPAN" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1 .07 1.54 1 1.54 1 .89 1.52 2.34 1.08 2.91.83a2.07 2.07 0 01.62-1.31c-2.22-.25-4.56-1.11-4.56-4.94a3.87 3.87 0 011-2.68 3.59 3.59 0 01.1-2.64s.84-.27 2.75 1a9.52 9.52 0 015 0c1.91-1.28 2.75-1 2.75-1a3.59 3.59 0 01.1 2.64 3.87 3.87 0 011 2.68c0 3.83-2.34 4.69-4.57 4.94a2.33 2.33 0 01.67 1.8v2.67c0 .26.18.57.69.48A10 10 0 0012 2z" />
+                    </svg>
+                </a>
+                <div class="project-skills-list">
+                    <span>Python</span>
+                    <span>YouTube API</span>
+                    <span>HTML</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Big Data Analysis on Epidemic Data (Machine Learning on COVID-19)</h3>
+                <p>Used machine learning algorithms on COVID-19 data to predict outcomes based on historical trends.</p>
+                <a class="project-link" href="https://ijngc.perpetualinnovation.net/index.php/ijngc/article/view/1014" target="_blank" aria-label="GitHub">
+                    research paper
+                </a>
+                <div class="project-skills-list">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>PySpark</span>
+                    <span>Fbprophet</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Play 2048 with AI</h3>
+                <p>Uses a hill-climbing algorithm to solve the 2048 game.</p>
+                <a class="project-link" href="https://github.com/jatin-jangir/2048Game_AI_hillclimbing" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.63.07-.62.07-.62 1 .07 1.54 1 1.54 1 .89 1.52 2.34 1.08 2.91.83a2.07 2.07 0 01.62-1.31c-2.22-.25-4.56-1.11-4.56-4.94a3.87 3.87 0 011-2.68 3.59 3.59 0 01.1-2.64s.84-.27 2.75 1a9.52 9.52 0 015 0c1.91-1.28 2.75-1 2.75-1a3.59 3.59 0 01.1 2.64 3.87 3.87 0 011 2.68c0 3.83-2.34 4.69-4.57 4.94a2.33 2.33 0 01.67 1.8v2.67c0 .26.18.57.69.48A10 10 0 0012 2z" />
+                    </svg>
+                </a>
+                <div class="project-skills-list">
+                    <span>Python</span>
+                    <span>AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="blogs">
+        <h2>Blogs & Research Papers</h2>
+        <ul>
+            <li><a href="https://devtron.ai/blog/securing-kubernetes-production-avoid-these-11-common-misconfigurations/" target="_blank">Securing Kubernetes Production: Avoid These 11 Common Misconfigurations</a></li>
+            <li><a href="https://devtron.ai/blog/time-based-scaling-for-kubernetes-deployments/" target="_blank">Time-Based Scaling for Kubernetes Deployments</a></li>
+            <li><a href="https://ijngc.perpetualinnovation.net/index.php/ijngc/article/view/1014" target="_blank">Research Paper: Machine Learning Applications in Epidemic Data Analysis</a></li>
+        </ul>
+    </section>
+
+    <section id="sketches">
+        <h2>Sketches</h2>
+        <div class="sketches-grid">
+            <div class="sketch-card">
+                <img src="images/sk1.jpg" alt="Sketch 1">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk3.png" alt="Sketch 3">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk4.jpg" alt="Sketch 1">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk5.jpg" alt="Sketch 2">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk6.jpg" alt="Sketch 3">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk7.jpg" alt="Sketch 2">
+            </div>
+            <div class="sketch-card">
+                <img src="images/sk8.jpg" alt="Sketch 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Jatin Jangir</p>
+    </footer>
+</body>
+</html>
